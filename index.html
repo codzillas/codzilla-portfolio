@@ -44,6 +44,39 @@
   </head>
   <body>
     <div class="page-wrapper">
+      <div
+        data-w-id="970d5027-0a3c-c315-7298-951fcda8aed6"
+        class="loader-wrap"
+        style="display: flex; opacity: 1"
+        id="loader"
+      >
+        <div
+          class="loader-lottie"
+          data-w-id="6d2bb7eb-4595-1f63-51b1-3de04897f15a"
+          data-animation-type="lottie"
+          data-src="./json/logo.json"
+          data-loop="1"
+          data-direction="1"
+          data-autoplay="1"
+          data-is-ix2-target="1"
+          data-renderer="svg"
+          data-duration="0"
+          data-default-duration="2.6666666666666665"
+        ></div>
+        <h3
+          data-w-id="da681be3-f0fa-ca06-b794-72f3b4144879"
+          style="font-variation-settings: 'wght' 600"
+          class="centre-align"
+        >
+          Codzilla
+        </h1>
+      </div>
+
+      <!-- Content -->
+      <div id="content" style="display: none">
+        <!-- Your HTML content here -->
+      </div>
+
       <div class="w-embed">
         <style>
           a {
@@ -68,7 +101,7 @@
               class="hero-section"
             >
               <div class="nav-wrapper">
-                <a href="/" class="nav-logo w-inline-block"
+                <a href="#" class="nav-logo w-inline-block"
                   ><div
                     class="logo"
                     data-w-id="6d2bb7eb-4595-1f63-51b1-3de04897f15a"
@@ -1670,6 +1703,21 @@
         ></div>
       </div>
     </div>
+    <script>
+      window.addEventListener("load", function () {
+        // Display content after a 1-second delay
+        setTimeout(function () {
+          // Hide the loader
+          document.getElementById("loader").style.opacity = "0";
+          setTimeout(function () {
+            document.getElementById("loader").style.display = "none";
+          }, 500); // Allow transition to finish before removing
+
+          // Show the main content
+          document.getElementById("content").style.display = "block";
+        }, 1000);
+      });
+    </script>
     <script
       src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66715118c4748bd61331f714"
       type="text/javascript"
